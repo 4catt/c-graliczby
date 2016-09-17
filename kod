@@ -1,0 +1,34 @@
+#include <iostream>
+#include <cstdlib>
+#include <time.h>
+
+using namespace std;
+
+int liczba, strzal;
+
+int main()
+{
+	cout<<"Witaj! liczba 1..100"<< endl;
+	srand(time(NULL));
+	liczba = rand()%100+1;
+	cout<<liczba<<endl;
+	
+	while(strzal!=liczba)
+	{
+		cout<<"zgadnij jaka:";
+		cin>>strzal;
+		
+		if(strzal==liczba)
+			cout<<"udalo sie! wygrywasz" <<endl;
+			
+		else if(strzal<liczba)
+			cout<<"to za malo"<<endl;
+			
+		else if(strzal>liczba)
+			cout<<"to za duzo"<< endl;
+	}
+	
+	return 0;	
+	
+	
+}
